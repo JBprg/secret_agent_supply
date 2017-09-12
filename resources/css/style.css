@@ -1,0 +1,187 @@
+html {                        /* Specs from course example */
+  font-family: sans-serif;
+  font-size: 18px;
+  line-height: 1.15;
+  background-color: white;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  line-height: 1.4em;
+}
+
+div {
+  display: block;
+}
+
+/* Company Header */
+.company {
+  background-color: black;
+  color: white;
+}
+
+.container {                  /* Sets up repeatable container specs */
+    max-width: 960px;
+    margin: 0 auto;           /*Expands background to edge of viewscreen*/
+}
+
+.company .container {
+    display: flex;
+    align-items: center;
+    padding: 12px 0 12px 0.5em;
+}
+
+img {                          /* From course example */
+    border-style: none;
+}
+
+.company img {
+    height: 1.5em;
+    padding-right: 15px;       /* Sets padding between logo and name */
+}
+
+/* Main Banner */
+.main-banner {
+    background: url(../images/moto.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 25em;
+}
+
+.headline {                    /* Set up headline box */
+    background-color: black;
+    color: white;
+    width: 20em;
+    padding: 2em 3em;
+    position: relative;
+    top: 9em;
+}
+
+h1, h4 {                       /* Set up headline text */
+    font-weight: bold;
+}
+
+.headline h1 {                 /* Set up headline text */
+    font-size: 2em;
+    line-height: 1.2em;
+    margin: 0.25em 0;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: firebrick;
+    color: white;
+}
+
+nav ul {                       /* Set up navigation options - larger screen */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75em 0;
+    list-style: none;
+}
+
+.mobile-nav {                /* Set up navigation options - small screen */
+    display: none;
+}
+
+/* Products and Business Info */
+.products, .business-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 3em 0 0 0;
+}
+
+.product {
+    width: 30%;
+}
+
+.product-image {
+    border: 4px solid black;
+    padding: 2em 0;
+    height: 9em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.description {
+    display: block;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 0.5em;
+}
+
+.product-image img {
+    max-width: 8em;
+}
+
+.products, .business-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 3em 0 0 0;
+}
+
+.info {
+    width: 35%;
+}
+
+.info .title {
+    display: block;
+    background-color: black;
+    color: white;
+    padding: 1em 2em;
+}
+
+/* Footer */
+Footer {
+    background-color: black;
+    color: white;
+    padding: 5em 0;
+    margin-top: 4em;
+}
+
+/* Responsive Media Scripts */
+
+/* Reduces font-size as screen size reduces */
+@media only screen and (max-width: 1024px)
+{
+  body {
+    font-size: 16px;
+  }
+}
+
+/* Hides nav options as screen size reduces */
+@media only screen and (max-width: 1024px)
+{
+  nav ul {
+    display: none;
+  }
+}
+
+/* Positions menu on nav as screen size reduces */
+@media only screen and (max-width: 1024px)
+{
+  .mobile-nav {
+    display: block;
+    text-align: center;
+  }
+}
+
+/* Broadens remaining product images as screen reduces */
+@media only screen and (max-width: 1024px)
+{
+  .product {
+      width: 47%;
+  }
+}
+
+/* Removes sunglasses as screen size reduces */
+@media only screen and (max-width: 1024px)
+{
+  .product.glasses {
+      display: none;
+  }
+}
