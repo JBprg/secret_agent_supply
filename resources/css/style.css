@@ -1,4 +1,4 @@
-html {                        /* Specs from course example */
+html {                        /* Specs from redline */
   font-family: sans-serif;
   font-size: 18px;
   line-height: 1.15;
@@ -145,43 +145,71 @@ Footer {
 
 /* Responsive Media Scripts */
 
-/* Reduces font-size as screen size reduces */
+
 @media only screen and (max-width: 1024px)
 {
-  body {
+  body {                          /* Reduces font-size as screen size reduces */
     font-size: 16px;
   }
-}
-
-/* Hides nav options as screen size reduces */
-@media only screen and (max-width: 1024px)
-{
-  nav ul {
+  nav ul {                        /* Hides nav options as screen size reduces */
     display: none;
   }
-}
-
-/* Positions menu on nav as screen size reduces */
-@media only screen and (max-width: 1024px)
-{
-  .mobile-nav {
+  .mobile-nav {                   /* Positions menu on nav as screen size reduces */
     display: block;
     text-align: center;
   }
-}
-
-/* Broadens remaining product images as screen reduces */
-@media only screen and (max-width: 1024px)
-{
-  .product {
+  .product {                      /* Broadens products #1 and #2 for screens between 471px and 1024px */
       width: 47%;
   }
-}
-
-/* Removes sunglasses as screen size reduces */
-@media only screen and (max-width: 1024px)
-{
-  .product.glasses {
+  .product.three {                /* Removes product #3 as screen size reduces between 471px and 1024px */
       display: none;
   }
+}
+
+
+@media only screen and (max-width: 470px)
+{
+  .main-banner {               /* Resizes main banner for screens below 471px */
+    height: 15rem;
+  }
+
+  .headline {                  /* Repositions headline text for screens below 471px */
+    width: auto;
+    padding: 1em 2em;
+    top: 10em;
+  }
+
+  .headline h1 {               /* Resized headline text font for screens below 471px */
+    font-size: 1rem;
+  }
+
+  h4 {
+    font-size: 0.77rem;        /* Resized headline text font for screens below 471px */
+  }
+  .products {
+    justify-content: center;   /* Centers product #1 image for screens below 471px */
+  }
+
+  .product {                   /* Broadens product #1 images for screens below 471px */
+      width: 90%;
+  }
+
+  .product.two {               /* Removes product #2 as screen size below 471px */
+      display: none;
+  }
+   .business-info {            /* Stacks info boxes as screen size below 471px */
+     display: block;
+   }
+
+   .info {                     /* Broadens and centers info boxes as screen size below 471px */
+       width: 90%;
+       padding-top: 0.5rem;
+       margin: auto;
+   }
+
+  footer {                     /* Centers text as screen size below 471px */
+    text-align: center;
+  }
+
+
 }
